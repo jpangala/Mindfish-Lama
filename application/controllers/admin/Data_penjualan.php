@@ -13,10 +13,7 @@ class data_penjualan extends CI_Controller{
         $data['penjualan']      = $this->model_penjualan->tampil_data_penjualan()->result();
         $data['katalog_asli']   = $this->model_penjualan->tampil_data_katalog()->result();
         $data['ikan']           = $this->model_katalog->tampil_data_katalog()->result();
-        $this->load->view('templates_admin/header');
-        $this->load->view('templates_admin/sidebar_akun');
         $this->load->view('admin/data_penjualan', $data);
-        $this->load->view('templates_admin/footer');
         
     }
     public function detail($id)
@@ -118,6 +115,39 @@ class data_penjualan extends CI_Controller{
             );
             $this->model_penjualan->update_data($data, 'penjualan', $id);
             redirect('admin/data_penjualan/');
+    }
+    public function edit_penjualan()
+    {
+        $id_penjualan      =$this->input->post('id_penjualan');
+        $nama_pembeli      =$this->input->post('nama_pembeli');
+        $tanggal_dibuat    =$this->input->post('tanggal_dibuat');
+        $status            =$this->input->post('status');
+
+            $data = array(
+                'nama_pembeli' => $nama_pembeli,
+                'tanggal_dibuat' => $tanggal_dibuat,
+                'status' => $status
+            );
+            $where = array(
+                'id' => $id_penjualan
+            );
+            $this->model_penjualan->update_data_penjualan($where,$data, 'penjualan');
+            redirect('admin/data_penjualan');
+    }
+    public function hapus_penjualan()
+    {
+        $id_penjualan        =$this->input->post('id_penjualan');
+
+            $where = array(
+                'id' => $id_penjualan
+            );
+            $this->model_penjualan->hapus_data($where, 'penjualan');
+            redirect('admin/data_penjualan');
+    }
+    public function test()
+    {
+        $query = $this->model_penjualan->test();
+        var_dump($query);
     }
     
 

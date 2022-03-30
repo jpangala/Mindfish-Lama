@@ -1,6 +1,6 @@
 <?php
 
-class Model_penjualan extends CI_Model{
+class Model_dashboard extends CI_Model{
     
     public function tampil_data_detail($where){
         $this->db->select('detail_penjualan.id,detail_penjualan.jumlah,ikan.nama_ikan,ikan.deskripsi,ikan.harga,detail_penjualan.harga_jual,detail_penjualan.subtotal_harga');

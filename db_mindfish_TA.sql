@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2022 at 02:19 AM
+-- Generation Time: Mar 30, 2022 at 12:24 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -62,7 +62,14 @@ INSERT INTO `detail_penjualan` (`id`, `id_ikan`, `id_penjualan`, `jumlah`, `harg
 (49, 1, 4, 12, 15000, 180000),
 (50, 2, 6, 1, 2000000, 2000000),
 (51, 2, 9, 3, 2000000, 6000000),
-(52, 20, 9, 5, 25000, 125000);
+(52, 20, 9, 5, 25000, 125000),
+(53, 2, 10, 7, 2000000, 14000000),
+(54, 1, 11, 4, 15000, 60000),
+(55, 20, 12, 15, 25000, 375000),
+(56, 1, 13, 15, 15000, 225000),
+(57, 2, 14, 1, 2000000, 2000000),
+(58, 2, 15, 1, 2000000, 2000000),
+(59, 1, 16, 1, 15000, 15000);
 
 -- --------------------------------------------------------
 
@@ -173,13 +180,19 @@ CREATE TABLE `penjualan` (
 --
 
 INSERT INTO `penjualan` (`id`, `no_penjualan`, `nama_pembeli`, `total_harga`, `tanggal_dibuat`, `tanggal_selesai`, `status`) VALUES
-(2, 'IKN01140001', 'Adit', 3955000, '2022-01-13 16:39:33', '0000-00-00 00:00:00', 'Proses'),
-(4, 'IKN02050003', 'Erika', 2105000, '2022-02-05 20:01:00', '0000-00-00 00:00:00', 'Proses'),
-(5, 'IKN02060004', 'Adi', 180000000, '2022-02-02 02:00:00', '0000-00-00 00:00:00', 'Proses'),
-(6, 'IKN02060005', 'Jek', 2000000, '2022-02-06 02:12:00', '0000-00-00 00:00:00', 'Proses'),
+(2, 'IKN01140001', 'Adit', 3955000, '2022-01-13 16:39:33', '0000-00-00 00:00:00', 'Selesai'),
+(4, 'IKN02050003', 'Erika', 2105000, '2022-04-13 20:01:00', '0000-00-00 00:00:00', 'Proses'),
+(5, 'IKN02060004', 'Adi', 180000000, '2022-03-24 02:00:00', '0000-00-00 00:00:00', 'Proses'),
+(6, 'IKN02060005', 'Jek', 2000000, '2022-04-06 02:12:00', '0000-00-00 00:00:00', 'Selesai'),
 (7, 'IKN02060006', 'Petrik', 1905000, '2022-02-06 02:12:00', '0000-00-00 00:00:00', 'Proses'),
 (8, 'IKN02060007', 'Siska', 10150000, '2022-02-06 02:22:00', '0000-00-00 00:00:00', 'Proses'),
-(9, 'IKN02110008', 'Felix', 6125000, '2022-02-11 01:04:00', '0000-00-00 00:00:00', 'Proses');
+(9, 'IKN02110008', 'Felix', 6125000, '2022-02-11 01:05:00', '0000-00-00 00:00:00', 'Proses'),
+(10, 'IKN03040009', 'Yudhi', 14000000, '2022-03-04 15:13:00', '0000-00-00 00:00:00', 'Proses'),
+(11, 'IKN03040010', 'Daniel', 60000, '2022-03-04 15:21:00', '0000-00-00 00:00:00', 'Proses'),
+(12, 'IKN03040011', 'Andy', 375000, '2022-04-14 15:21:00', '0000-00-00 00:00:00', 'Proses'),
+(13, 'IKN03040012', 'Hizkia', 225000, '2022-03-04 15:21:00', '0000-00-00 00:00:00', 'Proses'),
+(15, 'IKN03040013', 'Raja', 2000000, '2022-03-04 15:54:00', '0000-00-00 00:00:00', 'Proses'),
+(16, 'IKN03040014', 'Aldi', 15000, '2022-04-04 15:55:00', '0000-00-00 00:00:00', 'Proses');
 
 -- --------------------------------------------------------
 
@@ -591,7 +604,7 @@ ALTER TABLE `user_account`
 -- AUTO_INCREMENT for table `detail_penjualan`
 --
 ALTER TABLE `detail_penjualan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `ikan`
@@ -615,7 +628,7 @@ ALTER TABLE `pembudidaya_ikan`
 -- AUTO_INCREMENT for table `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `perusahaan`

@@ -1,18 +1,22 @@
+<?php $this->load->view('templates_admin/header');?>
+<?php $this->load->view('templates_admin/sidebar_akun');?>
 <div class="container-fluid">
     <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_stok"><i class="fas fa-plus fa-sm"></i> Perubahan Stok</button>
-    <table class="table table-bordered">
+    <table id="tables" class="table table-bordered">
     <thead class="thead-dark">
         <tr>
         <th>No</th>
+        <th>No1</th>
+        <th>Noo</th>
         <th>Nama Ikan</th>
         <th>Status</th>
         <th>Keterangan</th>
         <th>Nama Pembudidaya</th>
         <th>Timestamp</th>
-        <th colspan="3">AKSI</th>
+        <th>AKSI</th>
         </tr>
     </thead>
-
+    <tbody>
         <?php
         $no=1;
         foreach($stok as $katalog) : ?>
@@ -25,10 +29,11 @@
                 <td class="keterangan"><?php echo $katalog->keterangan ?></td>
                 <td class="nama_pembudidaya"><?php echo $katalog->nama_pembudidaya ?></td>
                 <td class="tanggal"><?php echo $katalog->tanggal ?></td>
-                <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_stok"><i class="fas fa-edit"></i></button></td>
-                <td><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_stok"><i class="fas fa-trash"></i></button></td>
+                <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_stok"><i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_stok"><i class="fas fa-trash"></i></button></td>
             </tr>
         <?php endforeach; ?>
+        </tbody>
     </table>
 </div>
 
@@ -188,3 +193,14 @@
     });
 
 </script>
+<script>
+  $(document).ready(function() {
+    $('#tables').DataTable({
+      "aoColumnDefs": [ { "sClass": "dpass", "aTargets": [ 1,2]} ]
+
+    });
+} );
+</script>
+<?php $this->load->view('templates_admin/footer');?>
+
+

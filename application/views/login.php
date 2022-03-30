@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Login Mindfish</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -31,13 +31,11 @@
         <div class="row justify-content-center">
 
             <div class="col-xl-10 col-lg-12 col-md-9">
-
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
+                        <div class="">
+                            <div class="">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
@@ -51,19 +49,11 @@
                                     <label>Password</label>
                                     <input type="password" name="password"  class="form-control" required>
                                 </div>
-
                       </div>
-                      <div class="modal-footer">
+                      <div class="modal-footer mb-2">
                         <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                       </div>
                       </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Lupa Password? Hubungi kami!</a>
-                                    </div>
-                                    <br>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

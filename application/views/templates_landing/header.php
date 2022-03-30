@@ -83,6 +83,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url().'Dashboard/masuk' ?>">Login</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?php echo base_url().'landing_page/product' ?>">Product</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>

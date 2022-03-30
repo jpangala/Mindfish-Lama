@@ -1,14 +1,17 @@
+<?php $this->load->view('templates_admin/header');?>
+<?php $this->load->view('templates_admin/sidebar_akun');?>
 <div class="container-fluid">
     <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i> Tambah Ikan</button>
-    <table class="table table-bordered">
+    <table id="tables" class="table table-bordered">
     <thead class="thead-dark">
         <tr>
+        <th>No</th>
         <th>No</th>
         <th>Nama Ikan</th>
         <th>Jumlah Stok</th>
         <th>Harga</th>
         <th>Deskripsi</th>
-        <th colspan="3">AKSI</th>
+        <th>AKSI</th>
         </tr>
     </thead>
 
@@ -22,8 +25,8 @@
                 <td class="stok"><?php echo $katalog->stok ?></td>
                 <td>Rp <?php echo number_format($katalog->harga,0,',','.'); ?></td>
                 <td class="deskripsi"><?php echo $katalog->deskripsi ?></td>
-                <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_ikan"><i class="fas fa-edit"></i></button></td>
-                <td><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_ikan"><i class="fas fa-trash"></i></button></td>
+                <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_ikan"><i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus_ikan"><i class="fas fa-trash"></i></button></td>
             </tr>
         <?php endforeach; ?>
     </table>
@@ -136,6 +139,7 @@
 </div>
 
 <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+
 <script>
     $('#edit_ikan').on('shown.bs.modal', function (e) {
     var _button = $(e.relatedTarget);
@@ -166,3 +170,12 @@
 
     });
 </script>
+<script>
+  $(document).ready(function() {
+    $('#tables').DataTable({
+      "aoColumnDefs": [ { "sClass": "dpass", "aTargets": [ 1]} ]
+
+    });
+} );
+</script>
+<?php $this->load->view('templates_admin/footer');?>
