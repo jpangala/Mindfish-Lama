@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-
+	
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets_product/css/styles.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets_landing/css2/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets_landing/css2/style_detail.css"> <!-- Resource style -->
 	<script src="<?php echo base_url() ?>assets_landing/js/modernizr.js"></script> <!-- Modernizr -->
@@ -64,6 +65,20 @@
 	<title>Product Mindfish</title>
 </head>
 <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="<?php echo base_url().'Landing_page/';?>">Mindfish</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    </ul>
+                    <form class="d-flex">
+                    <a href="<?php echo base_url().'Landing_page';?>" class="btn btn-primary " role="button" aria-pressed="true">Beranda</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
     <div class="row justify-content-center align-items-center">
             <div class="col-md-8 mt-5">
                 <div class="search"> <i class="fa fa-search"></i> <input type="text" class="form-control" placeholder="Have a question? Ask Now"> <button class="btn btn-primary">Search</button> </div>
@@ -75,7 +90,7 @@
 	<ul class="cd-items cd-container">
 		<li class="cd-item">
 			<img src="<?php echo base_url() ?>assets_landing/img/portfolio/budidaya_gurame.jpg" alt="Item Preview">
-			<a href="#0" class="cd-trigger">Quick View</a>
+			<a href="<?php echo base_url().'Landing_page/detail';?>" >Quick View</a>
 		</li> <!-- cd-item -->
 
 		<li class="cd-item">

@@ -20,4 +20,11 @@ public function product()
         $this->load->view('product', $data);
     }
     
+
+public function detail()
+    {
+        $data['product'] = $this->model_katalog->tampil_data_katalog()->result();
+        $this->load->view('detail_product', $data);
+    }
+    
 }
